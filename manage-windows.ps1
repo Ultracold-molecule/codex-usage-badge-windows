@@ -1,4 +1,4 @@
-param(
+﻿param(
     [ValidateSet('Install','Launch','Run','Uninstall','Status','Update','CheckUpdate','UpdatesOn','UpdatesOff','Functions')][string]$Action = 'Status',
     [string]$AppExe, [string]$NodeExe, [string]$CodexBin, [string]$CodexHome,
     [switch]$DisableAutoUpdate, [switch]$AutomaticUpdate, [switch]$ForceUpdate
