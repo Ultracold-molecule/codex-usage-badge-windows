@@ -611,9 +611,9 @@ try {
         'Run' { Run-Worker }
         'Uninstall' { Uninstall-Badge }
         'Status' { Show-Status }
-        'Update' { Invoke-BadgeUpdate $true }
-        'CheckUpdate' { Invoke-BadgeUpdate $false }
-        'UpdatesOn' { Assert-OwnedDirectory $script:InstallRoot; Write-Json (Join-Path $script:InstallRoot 'update-preferences.json') @{ Enabled=$true }; Write-Host '自动更新已开启。' }
+        'Update' { throw '此实验版不支持自动更新，请从本仓库手动获取新版。' }
+        'CheckUpdate' { throw '此实验版不支持自动更新，请从本仓库手动获取新版。' }
+        'UpdatesOn' { throw '此实验版不支持自动更新，请从本仓库手动获取新版。' }
         'UpdatesOff' { Assert-OwnedDirectory $script:InstallRoot; Write-Json (Join-Path $script:InstallRoot 'update-preferences.json') @{ Enabled=$false }; Write-Host '自动更新已关闭。' }
     }
 } catch {
